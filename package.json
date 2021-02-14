@@ -1,0 +1,22 @@
+{
+  "name": "time-stamped-console-log",
+  "version": "1.0.2",
+  "description": "A simple time stamped message for the console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-Browne/npm-time-stamped-message.git"
+  },
+  "author": "Paul Browne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Paul-Browne/npm-time-stamped-message/issues"
+  },
+  "homepage": "https://github.com/Paul-Browne/npm-time-stamped-message#readme",
+  "dependencies": {
+    "hours-minutes-seconds": "^1.0.1"
+  }
+}
