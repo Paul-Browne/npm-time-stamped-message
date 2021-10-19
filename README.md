@@ -13,16 +13,16 @@ or
 ###### if the time was quarter past nine in the morning
 
 ```js
-const tscl = require('time-stamped-console-log')
-tscl("hello world!");  
+import message from 'time-stamped-console-log';
+message("hello world!");  
 // 09:15:27 hello world!
 ```
 
 Options. All options are optional :)
 
 ```js
-const tscl = require('time-stamped-console-log')
-tscl("hello world!", {
+import message from 'time-stamped-console-log';
+message("hello world!", {
 	time: {
 		color: string,
 		background: string,
