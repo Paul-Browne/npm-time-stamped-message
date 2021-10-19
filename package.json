@@ -1,6 +1,6 @@
 {
   "name": "time-stamped-console-log",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple time stamped message for the console",
   "main": "index.js",
   "scripts": {

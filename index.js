@@ -1,4 +1,4 @@
-const hms = require('hours-minutes-seconds');
+import hms from 'hours-minutes-seconds';
 
 const colorCodes = {
 	reset: "\x1b[0m",
@@ -29,7 +29,7 @@ const colorCodes = {
     }
 };
 
-module.exports = (message, opt) => {
+export default (message, opt) => {
 	message = message || "";
 	opt = opt || {}
 	opt.time = opt.time || {
