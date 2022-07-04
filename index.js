@@ -38,15 +38,15 @@ const resolveColors = (type, color) => {
 export default (message, options) => {
 	const timeColor = resolveColors("text", options?.time?.color || options?.color || "white");
 	const timeBackground = resolveColors("background", options?.time?.background || options?.background || "none");
-	const timeDim = options?.time?.dim || options?.dim || dim;
-	const timeBright = options?.time?.bright || options?.bright || bright;
-	const timeUnderscore = options?.time?.underscore || options?.underscore || underscore;
+	const timeDim = (options?.time?.dim || options?.dim) ? dim : "";
+	const timeBright = (options?.time?.bright || options?.bright) ? bright : "";
+	const timeUnderscore = (options?.time?.underscore || options?.underscore) ? underscore : "";
 	const timeString = timeColor + timeBackground + timeDim + timeBright + timeUnderscore;
 	const messageColor = resolveColors("text", options?.message?.color || options?.color || "white");
 	const messageBackground = resolveColors("background", options?.message?.background || options?.background || "none");
-	const messageDim = options?.message?.dim || options?.dim || dim;
-	const messageBright = options?.message?.bright || options?.bright || bright;
-	const messageUnderscore = options?.message?.underscore || options?.underscore || underscore;
+	const messageDim = (options?.message?.dim || options?.dim) ? dim : "";
+	const messageBright = (options?.message?.bright || options?.bright) ? bright : "";
+	const messageUnderscore = (options?.message?.underscore || options?.underscore) ? underscore : "";
 	const messageString = messageColor + messageBackground + messageDim + messageBright + messageUnderscore;
 	console.log(`${timeString}${hms()}${reset} ${messageString}%s${reset}`, message);
 
