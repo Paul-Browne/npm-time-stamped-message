@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Paul-Browne/npm-time-stamped-message#readme",
   "dependencies": {
-    "hours-minutes-seconds": "^2.0.0"
+    "hours-minutes-seconds": "^2.0.2"
   }
 }
