@@ -1,6 +1,6 @@
 {
   "name": "time-stamped-console-log",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple time stamped message for the console",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Paul-Browne/npm-time-stamped-message#readme",
   "dependencies": {
-    "hours-minutes-seconds": "^2.0.2"
+    "hours-minutes-seconds": "^2.0.1"
   }
 }
