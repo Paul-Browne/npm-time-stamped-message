@@ -36,18 +36,18 @@ const resolveColors = (type, color) => {
 	}
 };
 export default (message, options) => {
-	var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
-	const timeColor = resolveColors("text", ((_a = options === null || options === void 0 ? void 0 : options.time) === null || _a === void 0 ? void 0 : _a.color) || (options === null || options === void 0 ? void 0 : options.color) || "none");
-	const timeBackground = resolveColors("background", ((_b = options === null || options === void 0 ? void 0 : options.time) === null || _b === void 0 ? void 0 : _b.color) || (options === null || options === void 0 ? void 0 : options.color) || "none");
-	const timeDim = (((_c = options === null || options === void 0 ? void 0 : options.time) === null || _c === void 0 ? void 0 : _c.dim) || (options === null || options === void 0 ? void 0 : options.dim)) ? dim : "";
-	const timeBright = (((_d = options === null || options === void 0 ? void 0 : options.time) === null || _d === void 0 ? void 0 : _d.bright) || (options === null || options === void 0 ? void 0 : options.bright)) ? bright : "";
-	const timeUnderscore = (((_e = options === null || options === void 0 ? void 0 : options.time) === null || _e === void 0 ? void 0 : _e.underscore) || (options === null || options === void 0 ? void 0 : options.underscore)) ? underscore : "";
+	const timeColor = resolveColors("text", options?.time?.color || options?.color || "white");
+	const timeBackground = resolveColors("background", options?.time?.background || options?.background || "none");
+	const timeDim = options?.time?.dim || options?.dim || dim;
+	const timeBright = options?.time?.bright || options?.bright || bright;
+	const timeUnderscore = options?.time?.underscore || options?.underscore || underscore;
 	const timeString = timeColor + timeBackground + timeDim + timeBright + timeUnderscore;
-	const messageColor = resolveColors("text", ((_f = options === null || options === void 0 ? void 0 : options.message) === null || _f === void 0 ? void 0 : _f.color) || (options === null || options === void 0 ? void 0 : options.color) || "none");
-	const messageBackground = resolveColors("background", ((_g = options === null || options === void 0 ? void 0 : options.message) === null || _g === void 0 ? void 0 : _g.color) || (options === null || options === void 0 ? void 0 : options.color) || "none");
-	const messageDim = (((_h = options === null || options === void 0 ? void 0 : options.message) === null || _h === void 0 ? void 0 : _h.dim) || (options === null || options === void 0 ? void 0 : options.dim)) ? dim : "";
-	const messageBright = (((_j = options === null || options === void 0 ? void 0 : options.message) === null || _j === void 0 ? void 0 : _j.bright) || (options === null || options === void 0 ? void 0 : options.bright)) ? bright : "";
-	const messageUnderscore = (((_k = options === null || options === void 0 ? void 0 : options.message) === null || _k === void 0 ? void 0 : _k.underscore) || (options === null || options === void 0 ? void 0 : options.underscore)) ? underscore : "";
+	const messageColor = resolveColors("text", options?.message?.color || options?.color || "white");
+	const messageBackground = resolveColors("background", options?.message?.background || options?.background || "none");
+	const messageDim = options?.message?.dim || options?.dim || dim;
+	const messageBright = options?.message?.bright || options?.bright || bright;
+	const messageUnderscore = options?.message?.underscore || options?.underscore || underscore;
 	const messageString = messageColor + messageBackground + messageDim + messageBright + messageUnderscore;
 	console.log(`${timeString}${hms()}${reset} ${messageString}%s${reset}`, message);
+
 };
